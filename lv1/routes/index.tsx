@@ -12,7 +12,7 @@ export default function Home() {
         }
       `}
       </style>
-      <h1>春までに3kg痩せる</h1>
+      <h1>春までに2kg痩せる</h1>
     </div>
   );
 }
