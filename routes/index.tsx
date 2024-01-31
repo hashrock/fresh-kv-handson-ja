@@ -1,4 +1,9 @@
-export default function Home() {
+
+
+export default async function Home() {
+  const db = await Deno.openKv()
+  const amount = await db.get(["amount"])
+  console.log(amount)
   return (
     <div>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +17,7 @@ export default function Home() {
         }
       `}
       </style>
-      <h1>春までに2kg痩せる</h1>
+      <h1>春までに{amount.value}kg痩せる</h1>
     </div>
   );
 }
