@@ -3,12 +3,14 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $index from "./routes/index.tsx";
+import * as $update from "./routes/update.tsx";
 
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/index.tsx": $index,
+    "./routes/update.tsx": $update,
   },
   islands: {},
   baseUrl: import.meta.url,

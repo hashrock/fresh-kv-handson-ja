@@ -1,9 +1,7 @@
-
-
 export default async function Home() {
   const db = await Deno.openKv()
   const amount = await db.get(["amount"])
-  console.log(amount)
+ 
   return (
     <div>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
