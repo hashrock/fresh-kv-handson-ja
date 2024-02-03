@@ -4,7 +4,7 @@
 
 import * as $index from "./routes/index.tsx";
 import * as $update from "./routes/update.tsx";
-
+import * as $CountUp from "./islands/CountUp.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -12,7 +12,9 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/update.tsx": $update,
   },
-  islands: {},
+  islands: {
+    "./islands/CountUp.tsx": $CountUp,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

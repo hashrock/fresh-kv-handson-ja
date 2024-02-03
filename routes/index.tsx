@@ -1,3 +1,5 @@
+import CountUp from "../islands/CountUp.tsx";
+
 export default async function Home() {
   const db = await Deno.openKv()
   const amount = await db.get(["amount"])
@@ -15,7 +17,9 @@ export default async function Home() {
         }
       `}
       </style>
-      <h1>春までに{amount.value}kg痩せる</h1>
+      <h1>春までに
+        <CountUp value={amount.value} />
+      kg痩せる</h1>
     </div>
   );
 }
